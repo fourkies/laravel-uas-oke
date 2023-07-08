@@ -48,7 +48,7 @@ class halamanController extends Controller
             ];
             halaman::create($data);
 
-            return redirect()->route('halaman.index')->with('success', 'Anda berhasil menambahkan data');
+            return redirect()->route('halaman.index')->with('success', 'Berhasil menambahkan data');
     }
 
     /**
@@ -64,7 +64,8 @@ class halamanController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $data = halaman::where('id',$id)->first();
+        return view('dashboard.halaman.edit')->with('data', $data);
     }
 
     /**
@@ -72,7 +73,23 @@ class halamanController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $request->validate(
+            [
+                'judul' => 'required',
+                'isi' => 'required',
+            ],[
+                'judul.required' => 'Judul wajib diisi',
+                'isi.required' => 'Isian tulisan wajib diisi'
+            ]
+            );
+
+            $data = [
+                'judul' => $request->judul,
+                'isi' => $request->isi
+            ];
+            halaman::where('id', $id)->update($data);
+
+            return redirect()->route('halaman.index')->with('success', 'Berhasil Update Data');
     }
 
     /**
@@ -80,6 +97,7 @@ class halamanController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        halaman::where('id',$id)->delete();
+        return redirect()->route('halaman.index')->with('success', 'Berhasil Delete Data');
     }
 }
