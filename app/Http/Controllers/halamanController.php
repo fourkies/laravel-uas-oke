@@ -11,7 +11,7 @@ class halamanController extends Controller
      */
     public function index()
     {
-        //
+        return view('dashboard.halaman.index');
     }
 
     /**
