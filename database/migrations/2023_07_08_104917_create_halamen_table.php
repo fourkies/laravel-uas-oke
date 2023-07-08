@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('halaman', function (Blueprint $table) {
             $table->id();
+            $table->string('judul');
+            $table->text('isi');
             $table->timestamps();
         });
     }
