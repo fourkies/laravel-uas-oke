@@ -31,5 +31,5 @@ Route::get('auth/logout',[authController::class,"logout"]);
 
 Route::get('/dashboard', function () {
 
-    return 'selamat datang ' . Auth::user()->email . ' di halaman dashboard';
+    return view('dashboard.index');
 })->middleware('auth');
