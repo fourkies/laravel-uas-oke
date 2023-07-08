@@ -32,9 +32,7 @@ Route::get('auth/logout',[authController::class,"logout"]);
 
 Route::prefix('dashboard')->middleware('auth')->group(
     function(){
-        Route::get('/',function(){
-            return view('dashboard.layout');
-    });
+        Route::get('/', [halamanController::class,'index']);
         Route::resource('halaman',halamanController::class);
     }
 );
