@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\halaman;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class halamanController extends Controller
 {
@@ -26,8 +28,24 @@ class halamanController extends Controller
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-    {
-        //
+    {   
+        Session::flash('judul' , $request->judul);
+        Session::flash('isi', $request->isi);
+        $request->validate(
+            [
+                'judul' => 'required',
+                'isi' => 'required',
+            ],[
+                'judul.required' => 'Judul wajib diisi',
+                'isi.required' => 'Isian tulisan wajib diisi'
+            ]
+            );
+
+            $data = [
+                'judul' => $request->judul,
+                'isi' => $request->isi
+            ];
+            halaman::create($data);
     }
 
     /**
