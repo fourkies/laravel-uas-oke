@@ -12,8 +12,9 @@ class halamanController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {
-        return view('dashboard.halaman.index');
+    {   
+        $data = halaman::orderBy('judul', 'asc')->get();
+        return view('dashboard.halaman.index')->with('data', $data);
     }
 
     /**
