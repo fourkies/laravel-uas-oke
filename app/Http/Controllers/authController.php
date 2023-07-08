@@ -4,10 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Laravel\Socialite\Facades\Socialite;
 
 class authController extends Controller
 {
+    function index()
+    {
+        return view('auth.index');
+    }
     function redirect() 
     {
         return Socialite::driver('google')->redirect();
@@ -30,10 +35,10 @@ class authController extends Controller
                 
             ]    
         );
-
-            return '<h1>Selamat anda sudah masuk</h1>';
+            Auth::login($user);
+            return redirect()->to('dashboard');
         }else{
-            return '<h1>Email tidak terdaftar</h1>';
+            return redirect()->to('auth')->with('error','Account yang anda masukkan tidak diizinkan untuk menggunakan halaman admin');
         }
 
     }
