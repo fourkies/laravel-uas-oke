@@ -19,7 +19,7 @@
                         <td>{{ $i }}</td>
                         <td>{{ $item->judul }}</td>
                         <td>
-                            <a href='' class="btn btn-sm btn-warning">Edit</a>
+                            <a href='{{ route('halaman.edit', $item->id) }}' class="btn btn-sm btn-warning">Edit</a>
                             <a href='' class="btn btn-sm btn-danger">Delete</a>
                         </td>
                         <?php $i++; ?>
