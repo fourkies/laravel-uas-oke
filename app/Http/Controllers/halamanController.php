@@ -46,6 +46,8 @@ class halamanController extends Controller
                 'isi' => $request->isi
             ];
             halaman::create($data);
+
+            return redirect()->route('halaman.index')->with('success', 'Anda berhasil menambahkan data');
     }
 
     /**
