@@ -14,12 +14,15 @@ class authController extends Controller
     }
     function callback()
     {
+       
         $user = Socialite::driver('google')->user();
         $id = $user->id;
         $email = $user->email;
         $name = $user->name;
 
-        $user = User::updateOrCreate(
+        $cek = User::where('email', $email)->count();
+        if($cek > 0) {
+           $user = User::updateOrCreate(
             ['email'=> $email],
             [
                 'name' => $name,
@@ -27,6 +30,11 @@ class authController extends Controller
                 
             ]    
         );
+
+            return '<h1>Selamat anda sudah masuk</h1>';
+        }else{
+            return '<h1>Email tidak terdaftar</h1>';
+        }
 
     }
 }
