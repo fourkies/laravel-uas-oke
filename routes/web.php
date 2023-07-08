@@ -21,3 +21,12 @@ Route::get('/', function () {
 Route::get('/auth/redirect', function () {
     return Socialite::driver('google')->redirect();
 });
+
+Route::get('/auth/callback', function () {
+    $user = Socialite::driver('google')->user();
+    $id = $user->id;
+    $email = $user->email;
+    $name = $user->name;
+
+    return "$id - $email - $name";  
+});
