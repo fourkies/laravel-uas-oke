@@ -48,9 +48,9 @@
                         value="{{ get_meta_value('_twitter') }}">
                 </div>
                 <div class="mb-3">
-                    <label for="_instagram" class="form-label">Instagram</label>
-                    <input type="text" class="form-control form-control-sm" name="_instagram" id="_instagram"
-                        value="{{ get_meta_value('_instagram') }}">
+                    <label for="_linkedin" class="form-label">Linkedin</label>
+                    <input type="text" class="form-control form-control-sm" name="_linkedin" id="_linkedin"
+                        value="{{ get_meta_value('_linkedin') }}">
                 </div>
                 <div class="mb-3">
                     <label for="_github" class="form-label">Github</label>
