@@ -45,5 +45,6 @@ Route::prefix('dashboard')->middleware('auth')->group(
         Route::post('profile', [profileController::class, "update"])->name('profile.update');
         Route::get('pengaturanhalaman', [pengaturanHalamanController::class, "index"])->name('pengaturanhalaman.index');
         Route::post('pengaturanhalaman', [pengaturanHalamanController::class, "update"])->name('pengaturanhalaman.update');
+        
     }
 );

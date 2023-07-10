@@ -5,7 +5,7 @@
         @csrf
         <div class="mb-3">
             <label for="judul" class="form-label">PROGRAMMING LANGUAGES & TOOLS</label>
-            <input type="text" class="form-control form-control-sm skill" name="_language" id=""
+            <input type="text" class="form-control form-control-sm skill" name="_language" id="judul"
                 aria-describedby="helpId" placeholder="Programming Language & Tools"
                 value="{{ get_meta_value('_language') }}">
         </div>
