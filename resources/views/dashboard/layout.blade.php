@@ -95,9 +95,9 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('experience.index') }}">
+                        <a class="nav-link" href="{{ route('jadwal.index') }}">
                             <i class="mdi mdi-file-document-box-outline menu-icon"></i>
-                            <span class="menu-title">Experience</span>
+                            <span class="menu-title">Jadwal</span>
                         </a>
                     </li>
                     <li class="nav-item">

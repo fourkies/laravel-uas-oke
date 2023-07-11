@@ -36,7 +36,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#jadwal">Jadwal</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
@@ -72,14 +72,16 @@
         </section>
         <hr class="m-0" />
         <!-- Experience-->
-        <section class="resume-section" id="experience">
+        <section class="resume-section" id="jadwal">
             <div class="resume-section-content">
-                <h2 class="mb-5">Experience</h2>
-                @foreach ($experience as $item)
+                <h2 class="mb-5">Jadwal</h2>
+                @foreach ($jadwal as $item)
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">{{ $item->judul }}</h3>
-                            <div class="subheading mb-3">{{ $item->info1 }}</div>
+                            <div class="subheading mb-1">{{ $item->name }}</div>
+                            <div class="subheading mb-1">{{ $item->info1 }}</div>
+                            <div class="subheading mb-1">{{ $item->info2 }}</div>
                             {!! $item->isi !!}
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">{{ $item->tgl_mulai_indo }} -
