@@ -1,15 +1,20 @@
 @extends('dashboard.layout')
 
 @section('konten')
-    <div class="pb-3"><a href="{{ route('education.index') }}" class="btn btn-secondary">
+    <div class="pb-3"><a href="{{ route('mahasiswa.index') }}" class="btn btn-secondary">
             Kembali</a>
     </div>
-    <form action="{{ route('education.store') }}" method="POST">
+    <form action="{{ route('mahasiswa.store') }}" method="POST">
         @csrf
         <div class="mb-3">
             <label for="judul" class="form-label">Universitas</label>
             <input type="text" class="form-control form-control-sm" name="judul" id="judul" aria-describedby="helpId"
                 placeholder="Universitas" value="{{ Session::get('judul') }}">
+        </div>
+        <div class="mb-3">
+            <label for="name" class="form-label">Mahasiswa</label>
+            <input type="text" class="form-control form-control-sm" name="name" id="name"
+                aria-describedby="helpId" placeholder="Nama Mahasiswa" value="{{ Session::get('name') }}">
         </div>
         <div class="mb-3">
             <label for="info1" class="form-label">Fakultas</label>

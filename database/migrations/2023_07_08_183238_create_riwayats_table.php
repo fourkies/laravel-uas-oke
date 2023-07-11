@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('riwayat', function (Blueprint $table) {
             $table->id();
             $table->string('judul');
-            $table->enum('tipe',['jadwal', 'education']);
+            $table->enum('tipe',['jadwal', 'mahasiswa']);
             $table->date('tgl_mulai');
             $table->date('tgl_akhir')->nullable();
             $table->string('info1')->nullable();

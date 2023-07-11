@@ -37,7 +37,7 @@
             <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#jadwal">Jadwal</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#mahasiswa">Mahasiswa</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards</a></li>
@@ -93,12 +93,13 @@
         </section>
         <hr class="m-0" />
         <!-- Education-->
-        <section class="resume-section" id="education">
+        <section class="resume-section" id="mahasiswa">
             <div class="resume-section-content">
-                <h2 class="mb-5">Education</h2>
-                @foreach ($education as $item)
+                <h2 class="mb-5">Mahasiswa</h2>
+                @foreach ($mahasiswa as $item)
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
+                            <h3 class="mb-0">{{ $item->name }}</h3>
                             <h3 class="mb-0">{{ $item->judul }}</h3>
                             <div class="subheading mb-3">{{ $item->info1 }}</div>
                             <div>{{ $item->info2 }}</div>

@@ -101,9 +101,9 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('education.index') }}">
+                        <a class="nav-link" href="{{ route('mahasiswa.index') }}">
                             <i class="mdi mdi-file-document-box-outline menu-icon"></i>
-                            <span class="menu-title">Education</span>
+                            <span class="menu-title">Mahasiswa</span>
                         </a>
                     </li>
                     <li class="nav-item">

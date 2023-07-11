@@ -8,8 +8,9 @@ use App\Http\Controllers\skillController;
 use App\Http\Controllers\jadwalController;
 use App\Http\Controllers\halamanController;
 use App\Http\Controllers\profileController;
-use App\Http\Controllers\educationController;
+// use App\Http\Controllers\educationController;
 // use App\Http\Controllers\experienceController;
+use App\Http\Controllers\mahasiswaController;
 use App\Http\Controllers\pengaturanHalamanController;
 
 /*
@@ -39,7 +40,7 @@ Route::prefix('dashboard')->middleware('auth')->group(
         Route::get('/', [halamanController::class,'index']);
         Route::resource('halaman',halamanController::class);
         Route::resource('jadwal', jadwalController::class);
-        Route::resource('education', educationController::class);
+        Route::resource('mahasiswa', mahasiswaController::class);
         Route::get('skill', [skillController::class, "index"])->name('skill.index');
         Route::post('skill', [skillController::class, "update"])->name('skill.update');
         Route::get('profile', [profileController::class, "index"])->name('profile.index');

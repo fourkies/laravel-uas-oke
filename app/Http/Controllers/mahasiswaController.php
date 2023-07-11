@@ -6,12 +6,12 @@ use App\Models\riwayat;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
-class educationController extends Controller
+class mahasiswaController extends Controller
 {
 
     function __construct()
     {
-        $this->_tipe = 'education';
+        $this->_tipe = 'mahasiswa';
     }
     /**
      * Display a listing of the resource.
@@ -19,7 +19,7 @@ class educationController extends Controller
     public function index()
     {
         $data = riwayat::where('tipe',  $this->_tipe)->orderBy('tgl_akhir','desc')->get();
-        return view('dashboard.education.index')->with('data', $data);
+        return view('dashboard.mahasiswa.index')->with('data', $data);
     }
 
     /**
@@ -27,7 +27,7 @@ class educationController extends Controller
      */
     public function create()
     {
-        return view('dashboard.education.create');
+        return view('dashboard.mahasiswa.create');
     }
 
     /**
@@ -35,6 +35,7 @@ class educationController extends Controller
      */
     public function store(Request $request)
     {
+        Session::flash('name' , $request->name);
         Session::flash('judul' , $request->judul);
         Session::flash('info1' , $request->info1);
         Session::flash('info2' , $request->info2);
@@ -43,18 +44,21 @@ class educationController extends Controller
         Session::flash('tgl_akhir' , $request->tgl_akhir);
         $request->validate(
             [
+                'name' => 'required',
                 'judul' => 'required',
                 'info1' => 'required',
                 'tgl_mulai' => 'required',
                 
             ],[
-                'judul.required' => 'Judul wajib diisi',
-                'info1.required' => 'Nama Perusahaan wajib diisi',
+                'name.required' => 'Nama Mahasiswa wajib diisi',
+                'judul.required' => 'Universitas wajib diisi',
+                'info1.required' => 'Nama Fakultas wajib diisi',
                 'tgl_mulai.required' => 'Tanggal Mulai wajib diisi',
             ]
             );
 
             $data = [
+                'name' => $request->name,
                 'judul' => $request->judul,
                 'info1' => $request->info1,
                 'info2' => $request->info2,
@@ -65,7 +69,7 @@ class educationController extends Controller
             ];
             riwayat::create($data);
 
-            return redirect()->route('education.index')->with('success', 'Berhasil menambahkan data Education');
+            return redirect()->route('mahasiswa.index')->with('success', 'Berhasil menambahkan data Mahasiswa');
     }
 
     /**
@@ -82,7 +86,7 @@ class educationController extends Controller
     public function edit(string $id)
     {
         $data = riwayat::where('id',$id)->where('tipe',$this->_tipe)->first();
-        return view('dashboard.education.edit')->with('data', $data);
+        return view('dashboard.mahasiswa.edit')->with('data', $data);
     }
 
     /**
@@ -92,19 +96,22 @@ class educationController extends Controller
     {
         $request->validate(
             [
+                'name' => 'required',
                 'judul' => 'required',
                 'info1' => 'required',
                 'tgl_mulai' => 'required',
                 
             ],[
-                'judul.required' => 'Judul wajib diisi',
-                'info1.required' => 'Nama Fakultas wajib diisi',
+                'name.required' => 'Nama Mahasiswa wajib diisi',
+                'judul.required' => 'Universitas wajib diisi',
+                'info1.required' => 'Fakultas wajib diisi',
                 'tgl_mulai.required' => 'Tanggal Mulai wajib diisi',
                 
             ]
             );
 
             $data = [
+                'name' => $request->name,
                 'judul' => $request->judul,
                 'info1' => $request->info1,
                 'info2' => $request->info2,
@@ -115,7 +122,7 @@ class educationController extends Controller
             ];
             riwayat::where('id', $id)->update($data);
 
-            return redirect()->route('education.index')->with('success', 'Berhasil Update Data Education');
+            return redirect()->route('mahasiswa.index')->with('success', 'Berhasil Update Data Mahasiswa');
     }
 
     /**
@@ -124,6 +131,6 @@ class educationController extends Controller
     public function destroy(string $id)
     {
         riwayat::where('id', $id)->where('tipe', $this->_tipe)->delete();
-        return redirect()->route('education.index')->with('success', 'Berhasil Delete Data Education');
+        return redirect()->route('mahasiswa.index')->with('success', 'Berhasil Delete Data Mahasiswa');
     }
 }

@@ -1,16 +1,21 @@
 @extends('dashboard.layout')
 
 @section('konten')
-    <div class="pb-3"><a href="{{ route('education.index') }}" class="btn btn-secondary">
+    <div class="pb-3"><a href="{{ route('mahasiswa.index') }}" class="btn btn-secondary">
             Kembali</a>
     </div>
-    <form action="{{ route('education.update', $data->id) }}" method="POST">
+    <form action="{{ route('mahasiswa.update', $data->id) }}" method="POST">
         @csrf
         @method('PUT')
         <div class="mb-3">
             <label for="judul" class="form-label">Universitas</label>
             <input type="text" class="form-control form-control-sm" name="judul" id="judul" aria-describedby="helpId"
                 placeholder="Universitas" value="{{ $data->judul }}">
+        </div>
+        <div class="mb-3">
+            <label for="name" class="form-label">Mahasiswa</label>
+            <input type="text" class="form-control form-control-sm" name="name" id="name"
+                aria-describedby="helpId" placeholder="Nama Mahasiswa" value="{{ $data->name }}">
         </div>
         <div class="mb-3">
             <label for="info1" class="form-label">Fakultas</label>

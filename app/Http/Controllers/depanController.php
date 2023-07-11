@@ -20,14 +20,14 @@ class depanController extends Controller
         $award_data = halaman::where('id', $award_id)->first();
         
         $jadwal_data = riwayat::where('tipe', 'jadwal')->get();
-        $education_data = riwayat::where('tipe', 'education')->get();
+        $mahasiswa_data = riwayat::where('tipe', 'mahasiswa')->get();
 
         return view('depan.index')->with([
             'about' => $about_data,
             'interest' => $interest_data,
             'award' => $award_data,
             'jadwal' => $jadwal_data,
-            'education' => $education_data
+            'mahasiswa' => $mahasiswa_data
 
         ]);
     }
