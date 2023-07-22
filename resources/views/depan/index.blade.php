@@ -79,9 +79,10 @@
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">{{ $item->judul }}</h3>
-                            <div class="subheading mb-1">{{ $item->name }}</div>
-                            <div class="subheading mb-1">{{ $item->info1 }}</div>
-                            <div class="subheading mb-1">{{ $item->info2 }}</div>
+                            <div class="subheading mb-0">{{ $item->name }}</div>
+                            <div class="subheading mb-0">{{ $item->info1 }}</div>
+                            <div class="subheading mb-0">{{ $item->info2 }}</div>
+                            <div class="subheading mb-5">{{ $item->info3 }}</div>
                             {!! $item->isi !!}
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">{{ $item->tgl_mulai_indo }} -

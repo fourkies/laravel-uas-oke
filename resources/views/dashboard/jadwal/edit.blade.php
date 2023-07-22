@@ -15,7 +15,7 @@
         <div class="mb-3">
             <label for="name" class="form-label">Mata Kuliah</label>
             <input type="text" class="form-control form-control-sm" name="name" id="name"
-                aria-describedby="helpId" placeholder="Nama Perusahaan" value="{{ $data->name }}">
+                aria-describedby="helpId" placeholder="Mata Kuliah" value="{{ $data->name }}">
         </div>
         <div class="mb-3">
             <label for="info1" class="form-label">Kelas</label>
@@ -23,15 +23,15 @@
                 aria-describedby="helpId" placeholder="Kelas" value="{{ $data->info1 }}">
         </div>
         <div class="mb-3">
-            <label for="info2" class="form-label">Jam Mulai</label>
+            <label for="info2" class="form-label">Hari</label>
             <input type="text" class="form-control form-control-sm" name="info2" id="info2"
-                aria-describedby="helpId" placeholder="Jam Mulai" value="{{ Session::get('info2') }}">
+                aria-describedby="helpId" placeholder="Hari" value="{{ Session::get('info2') }}">
         </div>
-        {{-- <div class="mb-3">
-            <label for="info3" class="form-label">Jam Akhir</label>
+        <div class="mb-3">
+            <label for="info3" class="form-label">Jam Mulai</label>
             <input type="text" class="form-control form-control-sm" name="info3" id="info3"
-                aria-describedby="helpId" placeholder="Jam Akhir" value="{{ Session::get('info3') }}">
-        </div> --}}
+                aria-describedby="helpId" placeholder="Jam Mulai" value="{{ Session::get('info3') }}">
+        </div>
         <div class="mb-3">
             <div class="row">
                 <div class="col-auto">Tanggal Mulai</div>

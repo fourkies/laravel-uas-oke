@@ -11,6 +11,7 @@
                     <th>Dosen</th>
                     <th>Mata Kuliah</th>
                     <th>Kelas</th>
+                    <th>Hari</th>
                     <th>Jam Mulai</th>
                     {{-- <th>Jam Akhir</th> --}}
                     <th>Tanggal Mulai</th>
@@ -26,7 +27,7 @@
                         <td>{{ $item->name }}</td>
                         <td>{{ $item->info1 }}</td>
                         <td>{{ $item->info2 }}</td>
-                        {{-- <td>{{ $item->info3 }}</td> --}}
+                        <td>{{ $item->info3 }}</td>
                         <td>{{ $item->tgl_mulai_indo }}</td>
                         {{-- <td>{{ $item->tgl_akhir_indo }}</td> --}}
                         <td>

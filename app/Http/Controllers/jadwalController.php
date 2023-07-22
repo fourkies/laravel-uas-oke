@@ -40,7 +40,7 @@ class jadwalController extends Controller
         Session::flash('name' , $request->name);
         Session::flash('info1' , $request->info1);
         Session::flash('info2' , $request->info2);
-        // Session::flash('info3' , $request->info3);
+        Session::flash('info3' , $request->info3);
         // Session::flash('tgl_mulai' , $request->tgl_mulai);
         // Session::flash('tgl_akhir' , $request->tgl_akhir);
         Session::flash('isi', $request->isi);
@@ -50,7 +50,7 @@ class jadwalController extends Controller
                 'name' => 'required',
                 'info1' => 'required',
                 'info2' => 'required',
-                // 'info3' => 'required',
+                'info3' => 'required',
                 'tgl_mulai' => 'required',
                 'isi' => 'required',
                 
@@ -58,8 +58,8 @@ class jadwalController extends Controller
                 'judul.required' => 'Nama Dosen wajib diisi',
                 'name.required' => 'Mata kuliah wajib diisi',
                 'info1.required' => 'Kelas wajib diisi',
-                'info2.required' => 'Jam Mulai wajib diisi',
-                // 'info3.required' => 'Jam Akhir wajib diisi',
+                'info2.required' => 'Hari wajib diisi',
+                'info3.required' => 'Jam Mulai wajib diisi',
                 'tgl_mulai.required' => 'Tanggal Mulai wajib diisi',
                 'isi.required' => 'Isian tulisan wajib diisi'
             ]
@@ -70,7 +70,7 @@ class jadwalController extends Controller
                 'name' => $request->name,
                 'info1' => $request->info1,
                 'info2' => $request->info2,
-                // 'info3' => $request->info3,
+                'info3' => $request->info3,
                 'tipe' =>  $this->_tipe,
                 'tgl_mulai' => $request->tgl_mulai,
                 // 'tgl_akhir' => $request->tgl_akhir,
@@ -109,15 +109,15 @@ class jadwalController extends Controller
                 'name' => 'required',
                 'info1' => 'required',
                 'info2' => 'required',
-                // 'info3' => 'required',
+                'info3' => 'required',
                 'tgl_mulai' => 'required',
                 'isi' => 'required',
             ],[
                 'judul.required' => 'Dosen wajib diisi',
                 'name.required' => 'Mata Kuliah wajib diisi',
                 'info1.required' => 'Kelas wajib diisi',
-                'info2.required' => 'Jam Mulai wajib diisi',
-                // 'info3.required' => 'Jam Akhir wajib diisi',
+                'info2.required' => 'Hari wajib diisi',
+                'info3.required' => 'Jam Mulai wajib diisi',
                 'tgl_mulai.required' => 'Tanggal Mulai wajib diisi',
                 'isi.required' => 'Isian tulisan wajib diisi'
             ]
@@ -128,7 +128,7 @@ class jadwalController extends Controller
                 'name' => $request->name,
                 'info1' => $request->info1,
                 'info2' => $request->info2,
-                // 'info3' => $request->info3,
+                'info3' => $request->info3,
                 'tgl_mulai' => $request->tgl_mulai,
                 // 'tgl_akhir' => $request->tgl_akhir,
                 'isi' => $request->isi
