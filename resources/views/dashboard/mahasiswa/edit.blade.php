@@ -8,14 +8,14 @@
         @csrf
         @method('PUT')
         <div class="mb-3">
-            <label for="judul" class="form-label">Universitas</label>
+            <label for="judul" class="form-label">Mahasiswa</label>
             <input type="text" class="form-control form-control-sm" name="judul" id="judul" aria-describedby="helpId"
-                placeholder="Universitas" value="{{ $data->judul }}">
+                placeholder="Nama Mahasiswa" value="{{ $data->judul }}">
         </div>
         <div class="mb-3">
-            <label for="name" class="form-label">Mahasiswa</label>
+            <label for="name" class="form-label">Universitas</label>
             <input type="text" class="form-control form-control-sm" name="name" id="name"
-                aria-describedby="helpId" placeholder="Nama Mahasiswa" value="{{ $data->name }}">
+                aria-describedby="helpId" placeholder="Nama Universitas" value="{{ $data->name }}">
         </div>
         <div class="mb-3">
             <label for="info1" class="form-label">Fakultas</label>

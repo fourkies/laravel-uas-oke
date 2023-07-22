@@ -35,8 +35,8 @@ class mahasiswaController extends Controller
      */
     public function store(Request $request)
     {
-        Session::flash('name' , $request->name);
         Session::flash('judul' , $request->judul);
+        Session::flash('name' , $request->name);
         Session::flash('info1' , $request->info1);
         Session::flash('info2' , $request->info2);
         Session::flash('info3' , $request->info3);
@@ -58,8 +58,8 @@ class mahasiswaController extends Controller
             );
 
             $data = [
-                'name' => $request->name,
                 'judul' => $request->judul,
+                'name' => $request->name,
                 'info1' => $request->info1,
                 'info2' => $request->info2,
                 'info3' => $request->info3,
@@ -96,14 +96,14 @@ class mahasiswaController extends Controller
     {
         $request->validate(
             [
-                'name' => 'required',
                 'judul' => 'required',
+                'name' => 'required',
                 'info1' => 'required',
                 'tgl_mulai' => 'required',
                 
             ],[
-                'name.required' => 'Nama Mahasiswa wajib diisi',
-                'judul.required' => 'Universitas wajib diisi',
+                'judul.required' => 'Nama Mahasiswa wajib diisi',
+                'name.required' => 'Universitas wajib diisi',
                 'info1.required' => 'Fakultas wajib diisi',
                 'tgl_mulai.required' => 'Tanggal Mulai wajib diisi',
                 
@@ -111,8 +111,8 @@ class mahasiswaController extends Controller
             );
 
             $data = [
-                'name' => $request->name,
                 'judul' => $request->judul,
+                'name' => $request->name,
                 'info1' => $request->info1,
                 'info2' => $request->info2,
                 'info3' => $request->info3,

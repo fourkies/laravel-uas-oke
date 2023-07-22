@@ -7,14 +7,14 @@
     <form action="{{ route('mahasiswa.store') }}" method="POST">
         @csrf
         <div class="mb-3">
-            <label for="judul" class="form-label">Universitas</label>
+            <label for="judul" class="form-label">Mahasiswa</label>
             <input type="text" class="form-control form-control-sm" name="judul" id="judul" aria-describedby="helpId"
-                placeholder="Universitas" value="{{ Session::get('judul') }}">
+                placeholder="Nama Mahasiswa" value="{{ Session::get('judul') }}">
         </div>
         <div class="mb-3">
-            <label for="name" class="form-label">Mahasiswa</label>
+            <label for="name" class="form-label">Universitas</label>
             <input type="text" class="form-control form-control-sm" name="name" id="name"
-                aria-describedby="helpId" placeholder="Nama Mahasiswa" value="{{ Session::get('name') }}">
+                aria-describedby="helpId" placeholder="Nama Universitas" value="{{ Session::get('name') }}">
         </div>
         <div class="mb-3">
             <label for="info1" class="form-label">Fakultas</label>
