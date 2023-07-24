@@ -100,11 +100,11 @@
                 @foreach ($mahasiswa as $item)
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">{{ $item->name }}</h3>
                             <h3 class="mb-0">{{ $item->judul }}</h3>
-                            <div class="subheading mb-3">{{ $item->info1 }}</div>
-                            <div>{{ $item->info2 }}</div>
-                            <p>{{ $item->info3 }}</p>
+                            <div class="subheading mb-0">{{ $item->name }}</div>
+                            <div class="subheading mb-0">{{ $item->info1 }}</div>
+                            <div class="subheading mb-0">{{ $item->info3 }}</div>
+                            <p class="subheading mb-0">{{ $item->info2 }}</p>
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">{{ $item->tgl_mulai_indo }} -
                                 {{ $item->tgl_akhir_indo }}</span></div>

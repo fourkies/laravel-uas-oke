@@ -44,14 +44,14 @@ class mahasiswaController extends Controller
         Session::flash('tgl_akhir' , $request->tgl_akhir);
         $request->validate(
             [
-                'name' => 'required',
                 'judul' => 'required',
+                'name' => 'required',
                 'info1' => 'required',
                 'tgl_mulai' => 'required',
                 
             ],[
-                'name.required' => 'Nama Mahasiswa wajib diisi',
-                'judul.required' => 'Universitas wajib diisi',
+                'judul.required' => 'Nama Mahasiswa wajib diisi',
+                'name.required' => 'Universitas wajib diisi',
                 'info1.required' => 'Nama Fakultas wajib diisi',
                 'tgl_mulai.required' => 'Tanggal Mulai wajib diisi',
             ]

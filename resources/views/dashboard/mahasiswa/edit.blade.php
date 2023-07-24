@@ -8,19 +8,19 @@
         @csrf
         @method('PUT')
         <div class="mb-3">
-            <label for="judul" class="form-label">Mahasiswa</label>
+            <label for="judul" class="form-label">Nama</label>
             <input type="text" class="form-control form-control-sm" name="judul" id="judul" aria-describedby="helpId"
                 placeholder="Nama Mahasiswa" value="{{ $data->judul }}">
         </div>
         <div class="mb-3">
-            <label for="name" class="form-label">Universitas</label>
+            <label for="name" class="form-label">NIM</label>
             <input type="text" class="form-control form-control-sm" name="name" id="name"
-                aria-describedby="helpId" placeholder="Nama Universitas" value="{{ $data->name }}">
+                aria-describedby="helpId" placeholder="Nim" value="{{ $data->name }}">
         </div>
         <div class="mb-3">
-            <label for="info1" class="form-label">Fakultas</label>
+            <label for="info1" class="form-label">Kelas</label>
             <input type="text" class="form-control form-control-sm" name="info1" id="info1"
-                aria-describedby="helpId" placeholder="Fakultas" value="{{ $data->info1 }}">
+                aria-describedby="helpId" placeholder="Kelas" value="{{ $data->info1 }}">
         </div>
         <div class="mb-3">
             <label for="info2" class="form-label">Prodi</label>
@@ -28,7 +28,7 @@
                 aria-describedby="helpId" placeholder="Prodi" value="{{ $data->info2 }}">
         </div>
         <div class="mb-3">
-            <label for="info3" class="form-label">IPK</label>
+            <label for="info3" class="form-label">Jenis Kelamin</label>
             <input type="text" class="form-control form-control-sm" name="info3" id="info3"
                 aria-describedby="helpId" placeholder="IPK" value="{{ $data->info3 }}">
         </div>

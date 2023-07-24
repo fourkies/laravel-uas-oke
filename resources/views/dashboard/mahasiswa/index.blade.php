@@ -8,11 +8,11 @@
             <thead>
                 <tr>
                     <th class="col-1">No</th>
-                    <th>Mahasiswa</th>
-                    <th>Universitas</th>
-                    <th>Fakultas</th>
+                    <th>Nama Mahasiswa</th>
+                    <th>Nim</th>
+                    <th>Kelas</th>
                     <th>Prodi</th>
-                    <th>IPK</th>
+                    <th>Jenis Kelamin</th>
                     <th>Tanggal Mulai</th>
                     <th>Tanggal Akhir</th>
                     <th class="col-2">Aksi</th>

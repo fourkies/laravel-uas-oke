@@ -7,19 +7,19 @@
     <form action="{{ route('mahasiswa.store') }}" method="POST">
         @csrf
         <div class="mb-3">
-            <label for="judul" class="form-label">Mahasiswa</label>
+            <label for="judul" class="form-label">Nama</label>
             <input type="text" class="form-control form-control-sm" name="judul" id="judul" aria-describedby="helpId"
                 placeholder="Nama Mahasiswa" value="{{ Session::get('judul') }}">
         </div>
         <div class="mb-3">
-            <label for="name" class="form-label">Universitas</label>
+            <label for="name" class="form-label">NIM</label>
             <input type="text" class="form-control form-control-sm" name="name" id="name"
-                aria-describedby="helpId" placeholder="Nama Universitas" value="{{ Session::get('name') }}">
+                aria-describedby="helpId" placeholder="Nim" value="{{ Session::get('name') }}">
         </div>
         <div class="mb-3">
-            <label for="info1" class="form-label">Fakultas</label>
+            <label for="info1" class="form-label">Kelas</label>
             <input type="text" class="form-control form-control-sm" name="info1" id="info1"
-                aria-describedby="helpId" placeholder="Fakultas" value="{{ Session::get('info1') }}">
+                aria-describedby="helpId" placeholder="Kelas" value="{{ Session::get('info1') }}">
         </div>
         <div class="mb-3">
             <label for="info2" class="form-label">Prodi</label>
@@ -27,9 +27,9 @@
                 aria-describedby="helpId" placeholder="Prodi" value="{{ Session::get('info2') }}">
         </div>
         <div class="mb-3">
-            <label for="info3" class="form-label">IPK</label>
+            <label for="info3" class="form-label">Jenis Kelamin</label>
             <input type="text" class="form-control form-control-sm" name="info3" id="info3"
-                aria-describedby="helpId" placeholder="IPK" value="{{ Session::get('info3') }}">
+                aria-describedby="helpId" placeholder="Jenis Kelamin" value="{{ Session::get('info3') }}">
         </div>
         <div class="mb-3">
             <div class="row">
