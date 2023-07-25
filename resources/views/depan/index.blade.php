@@ -116,7 +116,7 @@
         <!-- Skills-->
         <section class="resume-section" id="skills">
             <div class="resume-section-content">
-                <h2 class="mb-5">Skills</h2>
+                <h2 class="mb-5">Skils</h2>
                 <div class="subheading mb-3">Programming Languages & Tools</div>
                 <ul class="list-inline dev-icons">
                     @foreach (explode(', ', get_meta_value('_language')) as $item)
